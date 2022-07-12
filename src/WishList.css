@@ -1,0 +1,49 @@
+body {
+	background: #021c1f;
+	color: #ffffff;
+}
+.movie-app{
+  height: 100%;
+}
+
+.movie-app > .row {
+  margin-top: -120px;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+  height: 340px;
+  gap: 10px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  margin-left: 4px;
+}
+.movie-app .row::-webkit-scrollbar {
+  display: none; 
+}
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+  width: calc(86vw/4);
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+  width: calc(86vw/4);
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 18px;
+	text-align: center;
+  margin-left: -12px;
+}
